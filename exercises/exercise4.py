@@ -23,6 +23,23 @@ Restricciones:
     - Utilizar Type Hints en todos los métodos y variables
 """
 
+@dataclass
+class Materia:
+    nombre: str
+
+    def __repr__(self) -> str:
+        return f"Materia(nombre='{self.nombre}')"
+
+@dataclass
+class Carrera:
+    materias: List[Materia]
+
+    def __repr__(self) -> str:
+        return f"Carrera(materias={[mat for mat in self.materias]})"
+    
+    def __len__(self) -> int:
+        return len(self.materias)
+
 
 # NO MODIFICAR - INICIO
 # Test parámetro obligatorio
