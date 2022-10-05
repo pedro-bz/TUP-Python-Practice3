@@ -74,8 +74,8 @@ def calcular_sueldos(contribuyentes: List[Contribuyente]) -> List[float]:
     cada uno."""
 
     sueldos: List[float] = []
-    for sueldo in contribuyentes:
-        sueldos.append(sueldo.calcular_sueldo())
+    for contribuyente in contribuyentes:
+        sueldos.append(contribuyente.calcular_sueldo())
     return sueldos
 
 # NO MODIFICAR - INICIO
